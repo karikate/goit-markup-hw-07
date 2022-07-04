@@ -1,0 +1,27 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, serif;
+  color: var(--title-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+
+.link,
+.link:hover,
+.link:focus {
+  text-decoration: none;
+  color: var(--link-color);
+}
