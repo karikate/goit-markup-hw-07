@@ -1,16 +1,13 @@
 .about-list {
-    display: flex;
-  }
+display: flex;
+}
   
-  .about-item {
-    margin-left: 30px;
-  }
-  
-  .about-item:first-child {
+.about-item {
+margin-left: 30px;
+    &:first-child {
     margin-left: 0;
-  }
-  
-  .about-item .about-list-title {
+    }
+    &.about-list-title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -18,24 +15,26 @@
     text-transform: uppercase;
     color: inherit;
     margin-bottom: 10px;
-  }
+    }
+}
   
-  .about-list-text {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: var(--text-color);
-    width: 270px;
-  }
+
+.about-list-text {
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: var(--text-color);
+width: 270px;
+}
   
-  .about-icon-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 270px;
-    height: 120px;
-    background-color: var(--about-icon-color);
-    margin-bottom: 30px;
-    border-radius: 4px;
-  }
+.about-icon-list {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 270px;
+height: 120px;
+background-color: var(--about-icon-color);
+margin-bottom: 30px;
+border-radius: 4px;
+}
   

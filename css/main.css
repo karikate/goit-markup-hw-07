@@ -45,10 +45,10 @@ section {
   padding-bottom: 94px;
 }
 
-.link,
-.link:hover,
-.link:focus {
+.link {
   text-decoration: none;
+}
+.link:hover, .link:focus {
   color: var(--link-color);
 }
 
@@ -82,10 +82,6 @@ section {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(50%, 0) scale(0);
-}
-
 .modal {
   position: absolute;
   width: 528px;
@@ -98,6 +94,9 @@ section {
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(50%, 0) scale(0);
 }
 
 .modal-close-btn {
@@ -165,18 +164,10 @@ section {
   outline: transparent;
   cursor: pointer;
 }
-
-.modal-input:hover,
-.modal-input:focus {
+.modal-input:hover, .modal-input:focus {
   outline: 1px solid var(--btn-background-color);
   border-color: var(--btn-background-color);
   transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-input:hover + .input-icon,
-.modal-input:focus + .input-icon {
-  fill: var(--btn-background-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-icon {
@@ -184,6 +175,10 @@ section {
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
+}
+.modal-input:hover + .input-icon, .modal-input:focus + .input-icon {
+  fill: var(--btn-background-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-coment {
@@ -195,6 +190,11 @@ section {
   background-color: transparent;
   padding: 12px 16px;
   resize: none;
+}
+.modal-coment:hover, .modal-coment:focus {
+  outline: 1px solid var(--btn-background-color);
+  border-color: var(--btn-background-color);
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-field:nth-child(4) {
@@ -208,13 +208,6 @@ section {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-coment:hover,
-.modal-coment:focus {
-  outline: 1px solid var(--btn-background-color);
-  border-color: var(--btn-background-color);
-  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .check-text {
   font-size: 14px;
   line-height: 1.7142857143;
@@ -224,11 +217,9 @@ section {
   align-items: center;
   justify-content: center;
 }
-
 .check-text a {
   color: var(--link-color);
 }
-
 .check-text span {
   border: 1px solid var(--title-color);
   margin-right: 7px;
@@ -236,18 +227,16 @@ section {
   justify-content: center;
   align-items: center;
 }
-
-.check-icon {
-  fill: transparent;
-  padding: 2px;
-}
-
-.input-check:checked + .check-text span {
+.input-check:checked + .check-text .check-text span {
   background-color: var(--btn-background-color);
   border: none;
   border-radius: 2px;
 }
 
+.check-icon {
+  fill: transparent;
+  padding: 2px;
+}
 .input-check:checked + .check-text .check-icon {
   fill: var(--btn-text-color);
 }
@@ -263,18 +252,18 @@ section {
 }
 
 /* .check-text::before{
-  content: '';
-  width: 16px;
-  height: 15px;
-  border: 1px solid var(--title-color);
-  margin-right: 7px;
-}
-.input-check:checked + .check-text::before{
-  background-color: var(--btn-background-color) ;
-  background-image: url(../images/icon/check.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
+    content: '';
+    width: 16px;
+    height: 15px;
+    border: 1px solid var(--title-color);
+    margin-right: 7px;
+  }
+  .input-check:checked + .check-text::before{
+    background-color: var(--btn-background-color) ;
+    background-image: url(../images/icon/check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
 } */
 .header-list {
   display: flex;
@@ -286,33 +275,6 @@ section {
   align-items: center;
   padding-top: 26px;
   padding-bottom: 23px;
-}
-
-.logo {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: #000000;
-  text-decoration: none;
-}
-
-.logo-web {
-  color: var(--link-color);
-}
-
-.logo-studio-header {
-  color: #000000;
-}
-
-.header-logo {
-  margin-right: 93px;
-}
-
-.logo-studio-footer {
-  color: #ffffff;
 }
 
 .header-list-item:not(:last-child) {
@@ -333,7 +295,6 @@ section {
   position: relative;
   color: var(--link-color);
 }
-
 .current::after {
   content: "";
   position: absolute;
@@ -380,6 +341,33 @@ section {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.logo {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: #000000;
+  text-decoration: none;
+}
+
+.logo-web {
+  color: var(--link-color);
+}
+
+.logo-studio-header {
+  color: #000000;
+}
+
+.header-logo {
+  margin-right: 93px;
+}
+
+.logo-studio-footer {
+  color: #ffffff;
+}
+
 .hero {
   background-color: #2f303a;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/icon/background-hero.jpg);
@@ -424,7 +412,6 @@ section {
   border: 1px solid transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .btn:hover {
   background: #188ce8;
 }
@@ -436,12 +423,10 @@ section {
 .about-item {
   margin-left: 30px;
 }
-
 .about-item:first-child {
   margin-left: 0;
 }
-
-.about-item .about-list-title {
+.about-item.about-list-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -470,10 +455,6 @@ section {
   border-radius: 4px;
 }
 
-.work {
-  padding-top: 0;
-}
-
 .work-title,
 .team-title,
 .clients-title {
@@ -486,6 +467,10 @@ section {
   margin-bottom: 50px;
 }
 
+.work {
+  padding-top: 0;
+}
+
 .work-list {
   display: flex;
 }
@@ -493,7 +478,6 @@ section {
 .work-list-item {
   position: relative;
 }
-
 .work-list-item + .work-list-item {
   margin-left: 30px;
 }
@@ -530,7 +514,6 @@ section {
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
 }
-
 .team-list-item:not(:first-child) {
   margin-left: 30px;
 }
@@ -563,7 +546,6 @@ section {
   height: 44px;
   margin-left: 10px;
 }
-
 .team-soc-item:first-child {
   margin-left: 0;
 }
@@ -577,15 +559,13 @@ section {
   border-radius: 50%;
   color: var(--icon-color);
 }
+.team-soc-link:hover, .team-soc-link:focus {
+  background-color: var(--btn-background-color);
+  color: var(--btn-text-color);
+}
 
 .team-soc-icon {
   fill: currentColor;
-}
-
-.team-soc-link:hover,
-.team-soc-link:focus {
-  background-color: var(--btn-background-color);
-  color: var(--btn-text-color);
 }
 
 .clients-list {
@@ -600,8 +580,7 @@ section {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
 }
-
-.clients-item:first-child {
+.clients-itemfirst-child {
   margin-left: 0;
 }
 
@@ -614,22 +593,23 @@ section {
   border-radius: 4px;
   color: var(--icon-color);
 }
-
-.clients-icon {
-  fill: currentColor;
-}
-
-.clients-list-link:hover,
-.clients-list-link:focus {
+.clients-list-link:hover, .clients-list-link:focus {
   color: var(--link-color);
   border: 1px solid var(--link-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients-icon {
+  fill: currentColor;
 }
 
 .footer {
   background: var(--footer-background);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer .container {
+  display: flex;
 }
 
 .address {
@@ -664,12 +644,8 @@ section {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer .container {
-  display: flex;
-}
-
 .join {
-  margin-left: 70px;
+  margin-left: 70p;
   align-items: center;
 }
 
@@ -694,7 +670,6 @@ section {
   height: 44px;
   margin-left: 10px;
 }
-
 .join-soc-item:first-child {
   margin-left: 0;
 }
@@ -709,15 +684,13 @@ section {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--btn-text-color);
 }
+.join-soc-link:hover, .join-soc-link:focus {
+  background-color: var(--btn-background-color);
+  color: var(--btn-text-color);
+}
 
 .join-soc-icon {
   fill: currentColor;
-}
-
-.join-soc-link:hover,
-.join-soc-link:focus {
-  background-color: var(--btn-background-color);
-  color: var(--btn-text-color);
 }
 
 .subscribe {
@@ -751,7 +724,6 @@ section {
   padding-left: 16px;
   color: var(--btn-text-color);
 }
-
 .input-footer::placeholder {
   padding-top: 15px;
 }

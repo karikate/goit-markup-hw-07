@@ -19,9 +19,16 @@ section {
 }
 
 
-.link,
-.link:hover,
-.link:focus {
+// .link,
+// .link:hover,
+// .link:focus {
+//   text-decoration: none;
+//   color: var(--link-color);
+// }
+
+.link {
   text-decoration: none;
-  color: var(--link-color);
+  &:hover, &:focus{
+    color: var(--link-color);
+  }
 }
