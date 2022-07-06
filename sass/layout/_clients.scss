@@ -1,10 +1,10 @@
-.clients-list {
+.clients__list {
 display: flex;
 justify-content: center;
 }
 
   
-.clients-item {
+.clients__item {
 width: 170px;
 height: 92px;
 margin-left: 30px;
@@ -16,7 +16,7 @@ border-radius: 4px;
 }
   
   
-.clients-list-link {
+.clients__link {
 @extend %align-list; 
 justify-content: center;
 width: 100%;
@@ -32,7 +32,7 @@ color: var(--icon-color);
   }
 }
   
-.clients-icon {
+.clients__icon {
 fill: currentColor;
 }
   
