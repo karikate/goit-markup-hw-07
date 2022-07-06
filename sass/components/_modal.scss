@@ -36,9 +36,8 @@ width: 30px;
 height: 30px;
 border: 1px solid rgba(0, 0, 0, 0.1);
 border-radius: 50%;
-display: flex;
+@extend %align-list; 
 justify-content: center;
-align-items: center;
 background: transparent;
 padding: 6px;
 cursor: pointer;
@@ -152,8 +151,7 @@ font-size: 14px;
 line-height: calc(24/14);
 letter-spacing: 0.03em;
 color: var(--text-color);
-display: flex;
-align-items: center;
+@extend %align-list; 
 justify-content: center;
  a {
   color: var(--link-color);
@@ -161,10 +159,9 @@ justify-content: center;
  span{
   border: 1px solid var(--title-color);
   margin-right: 7px;
-  display: flex;
+  @extend %align-list; 
   justify-content: center;
-  align-items: center;
-  .input-check:checked + .check-text & {
+    .input-check:checked + .check-text & {
     background-color: var(--btn-background-color) ;
     border: none;
     border-radius: 2px;

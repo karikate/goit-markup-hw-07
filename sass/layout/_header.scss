@@ -1,11 +1,9 @@
 .header-list {
-display: flex;
-align-items: center;
+@extend %align-list; 
 }
   
 .header-nav {
-display: flex;
-align-items: center;
+@extend %align-list; 
 padding-top: 26px;
 padding-bottom: 23px;
 }

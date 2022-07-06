@@ -51,8 +51,7 @@ margin-left: 10px;
 }
    
 .team-soc-link {
-display: flex;
-align-items: center;
+@extend %align-list; 
 justify-content: center;
 width: 100%;
 height: 100%;

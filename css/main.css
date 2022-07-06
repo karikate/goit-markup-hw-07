@@ -107,9 +107,7 @@ section {
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  display: flex;
   justify-content: center;
-  align-items: center;
   background: transparent;
   padding: 6px;
   cursor: pointer;
@@ -214,8 +212,6 @@ section {
   line-height: 1.7142857143;
   letter-spacing: 0.03em;
   color: var(--text-color);
-  display: flex;
-  align-items: center;
   justify-content: center;
 }
 .check-text a {
@@ -224,9 +220,7 @@ section {
 .check-text span {
   border: 1px solid var(--title-color);
   margin-right: 7px;
-  display: flex;
   justify-content: center;
-  align-items: center;
 }
 .input-check:checked + .check-text .check-text span {
   background-color: var(--btn-background-color);
@@ -262,14 +256,12 @@ section {
     background-position: center;
     border: none;
 } */
-.header-list {
+.join-soc-link, .clients-list-link, .team-soc-link, .about-icon-list, .header-nav, .header-list, .modal-close-btn, .check-text, .check-text span {
   display: flex;
   align-items: center;
 }
 
 .header-nav {
-  display: flex;
-  align-items: center;
   padding-top: 26px;
   padding-bottom: 23px;
 }
@@ -442,9 +434,7 @@ section {
 }
 
 .about-icon-list {
-  display: flex;
   justify-content: center;
-  align-items: center;
   width: 270px;
   height: 120px;
   background-color: var(--about-icon-color);
@@ -548,8 +538,6 @@ section {
 }
 
 .team-soc-link {
-  display: flex;
-  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -582,8 +570,6 @@ section {
 }
 
 .clients-list-link {
-  display: flex;
-  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -592,8 +578,8 @@ section {
 }
 .clients-list-link:hover, .clients-list-link:focus {
   color: var(--link-color);
-  border: 1px solid var(--link-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: 1px solid var(--link-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
@@ -672,8 +658,6 @@ section {
 }
 
 .join-soc-link {
-  display: flex;
-  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -806,7 +790,7 @@ section {
   background: rgba(33, 150, 243, 0.9);
   padding: 63px 24px;
   height: 100%;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-item:hover .potfolio-overley {
