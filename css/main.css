@@ -222,7 +222,8 @@ section {
   margin-right: 7px;
   justify-content: center;
 }
-.input-check:checked + .check-text .check-text span {
+
+.input-check:checked + .check-text span {
   background-color: var(--btn-background-color);
   border: none;
   border-radius: 2px;
